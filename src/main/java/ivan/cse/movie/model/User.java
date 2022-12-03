@@ -1,6 +1,8 @@
 package ivan.cse.movie.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.NaturalId;
 
@@ -44,13 +46,53 @@ public class User {
     @Column(name = "password")
     private String password;
 
-
-    public User() {}
-
+    public User(){}
     public User(String username, String email, Date dob, long mobileNo, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.mobileNo = mobileNo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public long getMobileNo() {
+        return mobileNo;
+    }
+
+    public void setMobileNo(long mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+
+    @JsonIgnore
+    public String getPassword() {
+        return password;
+    }
+
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

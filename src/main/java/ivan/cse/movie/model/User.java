@@ -1,8 +1,6 @@
 package ivan.cse.movie.model;
 
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.NaturalId;
 
@@ -12,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "user")
@@ -46,17 +45,12 @@ public class User {
     private String password;
 
 
-    @Column(name = "user_type")
-    private String userType;
-
-
     public User() {}
 
     public User(String username, String email, Date dob, long mobileNo, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.dob = dob;
         this.mobileNo = mobileNo;
     }
 }

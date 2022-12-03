@@ -3,7 +3,7 @@ package ivan.cse.movie.controller.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import ivan.cse.movie.constants.RestAPI;
-import ivan.cse.movie.message.response.UserResponse;
+import ivan.cse.movie.message.request.CreateUserForm;
 import ivan.cse.movie.model.User;
 import ivan.cse.movie.service.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +28,13 @@ public class UserController {
     @GetMapping(path = RestAPI.GET_USER, produces = "application/json")
     public ResponseEntity<List<User>>getAllUsers(){
         return new ResponseEntity<List<User>>(userServices.getAllUsers(),HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Create User",httpMethod = "POST")
+    @PostMapping(path = RestAPI.REGISTER_USER, produces = "application/json")
+    public ResponseEntity<ResponseMessage> createUser(@RequestBody CreateUserForm createUserForm){
+        return new ResponseEntity<ResponseMessage>(new ResponseMessage(userServices.createUser(createUserForm)),
+                HttpStatus.OK);
     }
 
 }

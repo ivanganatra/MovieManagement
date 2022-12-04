@@ -34,6 +34,12 @@ public class TheatreController {
     public ResponseEntity<List<Theatre>>getAllTheatres(){
         return new ResponseEntity<List<Theatre>>(theatreServices.getAllTheatres(),HttpStatus.OK);
     }
+    @ApiOperation(value = "Get theatres by city name",httpMethod = "GET")
+    @GetMapping(path = RestAPI.GET_THEATRES_BY_CITY_NAME, produces = "application/json")
+    public ResponseEntity<List<Theatre>>getTheatresByCityName(@PathVariable("cityName") String cityName){
+        return new ResponseEntity<List<Theatre>>(theatreServices.getTheatresByCityName(cityName),HttpStatus.OK);
+    }
+
 
     @ApiOperation(value = "Add theatres",httpMethod = "POST")
     @PostMapping(path = RestAPI.ADD_THEATRE, produces = "application/json")

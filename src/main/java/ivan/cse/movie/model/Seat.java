@@ -24,6 +24,12 @@ public class  Seat {
     @Column(name = "seat_number")
     private Integer seatNumber;
 
+    @Column(name = "seat_type")
+    private Integer seatType;
+
+    @Column(name = "seat_status")
+    private Integer seatStatus;
+
     @ManyToOne
     @JoinColumn(name = "auditorium_id")
     @JsonManagedReference

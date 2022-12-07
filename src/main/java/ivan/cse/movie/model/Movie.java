@@ -27,7 +27,7 @@ public class Movie {
     private String genre;
 
     @Column(name = "duration")
-    private Integer duration;
+    private Long duration;
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
     @JsonBackReference
@@ -49,11 +49,11 @@ public class Movie {
         this.genre = genre;
     }
 
-    public Integer getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
-    public void setDuration(Integer duration) {
+    public void setDuration(Long duration) {
         this.duration = duration;
     }
 

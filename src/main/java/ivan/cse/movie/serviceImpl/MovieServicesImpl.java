@@ -26,7 +26,9 @@ public class MovieServicesImpl implements MovieServices {
 
     public List<Movie> getMoviesByCityId(String cityId){
 
-        return movieRepository.findByCityId(cityId);
+        //Not Yet Tested
+        return movieRepository.findAll();
+//        return movieRepository.findByCityId(cityId);
     }
     public String addMovie(CreateMovieForm createMovieForm) throws DataIntegrityViolationException{
         try {

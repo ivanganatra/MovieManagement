@@ -12,12 +12,17 @@ public class RestAPI {
 
     //Theatre API
     public static final String GET_THEATRES = "/getAllTheatres";
-    public static final String GET_THEATRES_BY_CITY = "/getTheatresByCityName/{cityId}";
+    public static final String GET_THEATRES_BY_CITY = "/getTheatresByCity/{cityId}";
     public static final String ADD_THEATRE = "/addTheatre";
 
     //Movie API
     public static final String GET_MOVIES = "/getAllMovies";
-    public static final String GET_MOVIES_BY_CITY= "/getMoviesByTheatreName/{movieId}";
+    public static final String GET_MOVIES_BY_CITY= "/getMoviesByCity/{movieId}";
     public static final String ADD_MOVIE = "/addMovie";
 
+    //Auditorium API
+    public static final String GET_AUDITORIUMS = "/getAllAuditoriums";
+    public static final String GET_AUDITORIUMS_BY_THEATRE= "/getAuditoriumByTheatreName/{auditoriumId}";
+    public static final String GET_AUDITORIUMS_BY_CITY= "/getAuditoriumByTheatreName/{cityId}";
+    public static final String ADD_AUDITORIUM = "/addAuditorium";
 }

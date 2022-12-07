@@ -22,13 +22,13 @@ public class  Seat {
     private Long id;
 
     @Column(name = "seat_number")
-    private Integer seatNumber;
+    private Long seatNumber;
 
     @Column(name = "seat_type")
-    private Integer seatType;
+    private Long seatType;
 
     @Column(name = "seat_status")
-    private Integer seatStatus;
+    private Long seatStatus;
 
     @ManyToOne
     @JoinColumn(name = "auditorium_id")

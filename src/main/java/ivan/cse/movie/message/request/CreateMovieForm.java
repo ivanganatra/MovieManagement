@@ -12,7 +12,7 @@ public class CreateMovieForm {
     public String title;
 
     @NotBlank
-    public Integer duration;
+    public Long duration;
 
     public String getGenre() {
         return genre;
@@ -30,11 +30,11 @@ public class CreateMovieForm {
         this.title = title;
     }
 
-    public Integer getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
-    public void setDuration(Integer duration) {
+    public void setDuration(Long duration) {
         this.duration=duration;
     }
 

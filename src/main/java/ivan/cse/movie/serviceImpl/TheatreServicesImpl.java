@@ -25,8 +25,8 @@ public class TheatreServicesImpl implements TheatreServices {
         return theatreRepository.findAll();
     }
 
-    public List<Theatre> getTheatresByCityName(String cityName){
-        return theatreRepository.findByCityName(cityName);
+    public List<Theatre> getTheatresByCityId(String cityId){
+        return theatreRepository.findByCityId(cityId);
     }
     public String addTheatre(CreateTheatreForm createTheatreForm) throws DataIntegrityViolationException{
         try {

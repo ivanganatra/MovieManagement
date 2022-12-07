@@ -12,5 +12,5 @@ import java.util.List;
 public interface TheatreServices {
     List<Theatre> getAllTheatres();
     String addTheatre(CreateTheatreForm createTheatreForm);
-    List<Theatre> getTheatresByCityName(String cityName);
+    List<Theatre> getTheatresByCityId(String cityId);
 }

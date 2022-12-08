@@ -25,4 +25,12 @@ public class RestAPI {
     public static final String GET_AUDITORIUMS_BY_THEATRE= "/getAuditoriumByTheatreName/{auditoriumId}";
     public static final String GET_AUDITORIUMS_BY_CITY= "/getAuditoriumByTheatreName/{cityId}";
     public static final String ADD_AUDITORIUM = "/addAuditorium";
+
+    //Screening API
+    public static final String GET_SCREENINGS = "/getAllScreenings";
+    public static final String GET_SCREENINGS_BY_THEATRE_AND_CITY= "/getScreeningsByTheatreAndCity/{theatreId}/{cityId}";
+    public static final String GET_SCREENINGS_BY_THEATRE_AND_CITY_AND_DATE= "/getScreeningsByTheatreAndCity/{theatreId}/{cityId}/{date}";
+    public static final String GET_SCREENINGS_BY_MOVIE_AND_CITY= "/getScreeningsByMovieAndCity/{movieId}/{cityId}";
+    public static final String GET_SCREENINGS_BY_MOVIE_AND_CITY_AND_DATE= "/getScreeningsByMovieAndCity/{movieId}/{cityId}/{date}";
+    public static final String ADD_SCREENING = "/addScreening";
 }

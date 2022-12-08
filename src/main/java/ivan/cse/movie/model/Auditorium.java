@@ -89,4 +89,12 @@ public class Auditorium {
     public void setScreenings(Set<Screening> screenings) {
         this.screenings = screenings;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

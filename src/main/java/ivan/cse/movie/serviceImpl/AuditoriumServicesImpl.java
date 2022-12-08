@@ -41,7 +41,7 @@ public class AuditoriumServicesImpl implements AuditoriumServices {
             auditorium.setName(createAuditoriumForm.getName());
             auditorium.setSeatCount(createAuditoriumForm.getSeatCount());
             auditorium.setTheatre(theatreRepository.getOne(createAuditoriumForm.getTheatreId()));
-             auditorium.setCityId(theatreRepository.getCityIdById(createAuditoriumForm.getTheatreId()));
+            auditorium.setCityId(theatreRepository.getCityIdById(createAuditoriumForm.getTheatreId()));
 
             auditoriumRepository.save(auditorium);
         } catch (DataIntegrityViolationException e) {

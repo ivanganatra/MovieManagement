@@ -1,6 +1,7 @@
 package ivan.cse.movie.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "movie")
 public class Movie {
@@ -32,6 +34,16 @@ public class Movie {
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
     @JsonBackReference
     private Set<Screening> screenings;
+
+    public Movie(){
+
+    }
+    public Movie(Long id, String title, String genre, Long duration) {
+        this.id= id;
+        this.title= title;
+        this.genre=genre;
+        this.duration=duration;
+    }
 
     public String getTitle() {
         return title;

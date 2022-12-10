@@ -13,6 +13,7 @@ import java.util.Set;
 @Entity
 @Table(name = "city")
 public class City {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "city_id")
@@ -20,6 +21,14 @@ public class City {
 
     @Column(name = "name")
     private String name;
+
+    public City(){
+
+    }
+    public City(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
     @JsonBackReference

@@ -40,7 +40,7 @@ public class TheatreController {
     }
     @ApiOperation(value = "Get theatres by city",httpMethod = "GET")
     @GetMapping(path = RestAPI.GET_THEATRES_BY_CITY, produces = "application/json")
-    public ResponseEntity<List<Theatre>>getTheatresByCityId(@PathVariable("cityId") String cityId){
+    public ResponseEntity<List<Theatre>>getTheatresByCityId(@PathVariable("cityId") Long cityId){
         return new ResponseEntity<List<Theatre>>(theatreServices.getTheatresByCityId(cityId),HttpStatus.OK);
     }
 

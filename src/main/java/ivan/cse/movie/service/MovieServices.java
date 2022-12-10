@@ -10,7 +10,7 @@ import java.util.List;
 public interface MovieServices {
     List<Movie> getAllMovies();
     String addMovie(CreateMovieForm createMovieForm);
-    List<Movie> getMoviesByCityId(String cityId);
+    List<Movie> getMoviesByCityId(Long cityId);
     List<Movie> getMoviesByTheatreIdAndCityId(Long cityId, Long theatreId);
     List<Movie> getMoviesByTheatreIdAndCityIdAndDate(Long cityId, Long theatreId, LocalDate date);
 }

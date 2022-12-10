@@ -34,13 +34,13 @@ public class AuditoriumController {
     }
     @ApiOperation(value = "Get auditoriums by theatre",httpMethod = "GET")
     @GetMapping(path = RestAPI.GET_AUDITORIUMS_BY_THEATRE, produces = "application/json")
-    public ResponseEntity<List<Auditorium>>getAuditoriumsByTheatre(@PathVariable("theatreId") String theatreId){
+    public ResponseEntity<List<Auditorium>>getAuditoriumsByTheatre(@PathVariable("theatreId") Long theatreId){
         return new ResponseEntity<List<Auditorium>>(auditoriumServices.getAuditoriumsByTheatreId(theatreId),HttpStatus.OK);
     }
 
     @ApiOperation(value = "Get auditoriums by city",httpMethod = "GET")
     @GetMapping(path = RestAPI.GET_AUDITORIUMS_BY_CITY, produces = "application/json")
-    public ResponseEntity<List<Auditorium>>getAuditoriumsByCity(@PathVariable("cityId") String cityId){
+    public ResponseEntity<List<Auditorium>>getAuditoriumsByCity(@PathVariable("cityId") Long cityId){
         return new ResponseEntity<List<Auditorium>>(auditoriumServices.getAuditoriumsByCityId(cityId),HttpStatus.OK);
     }
 

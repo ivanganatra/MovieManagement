@@ -12,7 +12,7 @@ import java.util.List;
 public interface TheatreRepository extends JpaRepository<Theatre, Long> {
 
 
-    List<Theatre> findByCityId(String cityId);
+    List<Theatre> findByCityId(Long cityId);
 
     @Query(value="select city_id from movie.theatre where theatre_id= ?1",nativeQuery=true )
     Long getCityIdById(Long theatreId);

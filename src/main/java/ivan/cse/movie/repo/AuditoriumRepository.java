@@ -8,7 +8,7 @@ import java.util.List;
 public interface AuditoriumRepository extends JpaRepository<Auditorium, Long> {
 
 
-    List<Auditorium> findByTheatreId(String theatreId);
+    List<Auditorium> findByTheatreId(Long theatreId);
 
-    List<Auditorium> findByCityId(String cityId);
+    List<Auditorium> findByCityId(Long cityId);
 }

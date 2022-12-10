@@ -28,10 +28,10 @@ public class AuditoriumServicesImpl implements AuditoriumServices {
         return auditoriumRepository.findAll();
     }
 
-    public List<Auditorium> getAuditoriumsByTheatreId(String theatreId){
+    public List<Auditorium> getAuditoriumsByTheatreId(Long theatreId){
         return auditoriumRepository.findByTheatreId(theatreId);
     }
-    public List<Auditorium> getAuditoriumsByCityId(String cityId){
+    public List<Auditorium> getAuditoriumsByCityId(Long cityId){
         return auditoriumRepository.findByCityId(cityId);
     }
 

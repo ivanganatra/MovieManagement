@@ -32,11 +32,15 @@ public class MovieServicesImpl implements MovieServices {
         return movieRepository.findAll();
     }
 
-    public List<Movie> getMoviesByCityId(String cityId){
+    public List<Movie> getMoviesByCityId(Long cityId){
 
-        //Not Yet Tested
-        return movieRepository.findAll();
-//        return movieRepository.findByCityId(cityId);
+        List<Screening> screening=screeningRepository.getScreeningByCityId(cityId);
+        List<Movie> movies=new ArrayList<Movie>();
+        for(Screening s: screening)
+        {
+            movies.add(s.getMovie());
+        }
+        return movies;
     }
 
     public List<Movie> getMoviesByTheatreIdAndCityId(Long cityId, Long theatreId){

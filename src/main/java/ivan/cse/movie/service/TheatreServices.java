@@ -14,7 +14,7 @@ import java.util.List;
 public interface TheatreServices {
     List<Theatre> getAllTheatres();
     String addTheatre(CreateTheatreForm createTheatreForm);
-    List<Theatre> getTheatresByCityId(String cityId);
+    List<Theatre> getTheatresByCityId(Long cityId);
     List<Theatre> getTheatresByMovieIdAndCityId(Long cityId, Long movieId);
     List<Theatre> getTheatresByMovieIdAndCityIdAndDate(Long cityId, Long movieId, LocalDate date);
 }

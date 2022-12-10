@@ -38,7 +38,7 @@ public class MovieController {
     }
     @ApiOperation(value = "Get movies by city",httpMethod = "GET")
     @GetMapping(path = RestAPI.GET_MOVIES_BY_CITY, produces = "application/json")
-    public ResponseEntity<List<Movie>>getMoviesByCityId(@PathVariable("cityId") String cityId){
+    public ResponseEntity<List<Movie>>getMoviesByCityId(@PathVariable("cityId")Long cityId){
         return new ResponseEntity<List<Movie>>(movieServices.getMoviesByCityId(cityId),HttpStatus.OK);
     }
 

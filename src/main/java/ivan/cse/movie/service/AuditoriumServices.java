@@ -8,6 +8,6 @@ import java.util.List;
 public interface AuditoriumServices {
     List<Auditorium> getAllAuditoriums();
     String addAuditorium(CreateAuditoriumForm createAuditoriumForm);
-    List<Auditorium> getAuditoriumsByTheatreId(String theatreId);
-    List<Auditorium> getAuditoriumsByCityId(String cityId);
+    List<Auditorium> getAuditoriumsByTheatreId(Long theatreId);
+    List<Auditorium> getAuditoriumsByCityId(Long cityId);
 }

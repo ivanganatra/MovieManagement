@@ -32,7 +32,7 @@ public class TheatreServicesImpl implements TheatreServices {
         return theatreRepository.findAll();
     }
 
-    public List<Theatre> getTheatresByCityId(String cityId){
+    public List<Theatre> getTheatresByCityId(Long cityId){
         return theatreRepository.findByCityId(cityId);
     }
 

@@ -54,7 +54,7 @@ public class Screening {
 
     @OneToMany(mappedBy = "screening", cascade = CascadeType.ALL)
     @JsonBackReference
-    private Set<SeatBooked> bookedSeats;
+    private Set<SeatBooked> seats;
 
     @OneToMany(mappedBy = "screening", cascade = CascadeType.ALL)
     @JsonBackReference
@@ -130,5 +130,37 @@ public class Screening {
 
     public void setAuditorium(Auditorium auditorium) {
         this.auditorium = auditorium;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Boolean getFull() {
+        return isFull;
+    }
+
+    public void setFull(Boolean full) {
+        isFull = full;
+    }
+
+    public Set<SeatBooked> getSeats() {
+        return seats;
+    }
+
+    public void setBookedSeats(Set<SeatBooked> seats) {
+        this.seats = seats;
+    }
+
+    public Set<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
